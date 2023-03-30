@@ -8,9 +8,9 @@ void bubble_sort(int arr[],int size)
     {
         if(arr[i] > arr[i + 1])
         {
-            int temp = arr[i];
-            arr[i] = arr[i + 1];
-            arr[i + 1] = temp;
+            arr[i] = arr[i] + arr[i + 1];
+            arr[i + 1] = arr[i] - arr[i + 1];
+            arr[i] = arr[i] - arr[i + 1];
         }
     }
     bubble_sort(arr, size - 1);
@@ -25,9 +25,9 @@ void bubble_sort(int arr[],int size)
         {
             if(arr[j] > arr[j + 1])
             {
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+                arr[j] = arr[j] + arr[j + 1];
+                arr[j + 1] = arr[j] - arr[j + 1];
+                arr[j] = arr[j] - arr[j + 1];
             }
             
         }
