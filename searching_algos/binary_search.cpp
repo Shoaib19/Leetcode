@@ -1,13 +1,12 @@
 int binary_search(int arr[],int size, int key)
 {
-    int mid =  size / 2;
-    if(arr[mid] == key)
-    return mid;
     int low = 0;
     int high = size - 1;
     
-    while(arr[mid] != key)
+    while(low <= high)
     {
+      mid = low + (high - low) / 2;
+      // start from here
         if(key < arr[mid])
         {
             high = mid;
